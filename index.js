@@ -38,7 +38,7 @@ app.post('/api/mail', async (req, res) => {
     from: 'chetanyaagrawall@gmail.com',
     to: 'gaurangagrawal626@gmail.com',
     subject: 'Hello, World!',
-    text: 'This is a test email from Node.js',
+    text: req.body.mail,
   };
   try {
     const info = await transporter.sendMail(mailOptions);
